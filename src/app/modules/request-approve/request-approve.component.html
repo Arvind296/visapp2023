@@ -1,0 +1,18 @@
+<div class="editor-page">
+  <div class="container page">
+    <div class="row">
+      <div class="col-md-12 col-xs-12">
+
+        <app-list-errors [errors]="errors"></app-list-errors>
+        <h2 style="color: #41ad4f; text-align: center;padding: 8px;">{{requestApproveTitlePage}}</h2>
+        <div>
+          <ng2-smart-table id="myTableElementId" [settings]="settings"  [source]="source"  (edit)="onEdit($event)">
+          </ng2-smart-table>
+        </div>
+      
+
+      </div>
+    </div>
+  </div>
+</div>
+

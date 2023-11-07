@@ -1,0 +1,294 @@
+
+<div *ngIf='!isSecurity'>
+  <app-userHome-page></app-userHome-page>
+</div>
+<div *ngIf='isSecurity' class="home-page">
+
+
+
+  
+  <div class="banner" >
+    <div class="container">
+      <h1 class="logo-font">{{'Footer.text' | translate}}</h1>
+  <!--     <p>Welcom <i>Angular</i> knowledge.</p> -->
+    </div>
+  </div>
+
+  <div class="container page">
+    <div class="row">
+
+  <!--begin search-->
+
+  <div class="animated fadeIn" style="margin: 7px;">
+  
+  <div>
+ 
+
+
+
+<div>
+
+  <div class="row" style="margin-bottom: 11px; text-align: center; vertical-align: middle;margin-right: 11px;">
+
+<!--     <div class='my-legend'>
+      <div class='legend-scale'>
+        <ul class='legend-labels'>
+          <li>
+              <span class="color" style='background:#0d8a74;'></span>
+              <span class="legend">قبول </span>
+              <span class="color" style='background:#dc3545;'></span>
+              <span class="legend">رفض</span>
+              <span class="color" style='background:#41ad4f;'></span>
+              <span class="legend">الصندوق</span>
+              <span class="color" style='background:#007bff;'></span>
+              <span class="legend">الهيئة </span>
+              <span class="color" style='background:#ffc107;'></span>
+              <span class="legend">العميل</span>
+          </li>
+        </ul>
+      </div>
+      </div> -->
+
+</div>
+
+
+    <div class="row" style="margin-bottom: 5px;">
+      <div class="col-sm-3 col-lg-3" >
+        <div class="card text-white bg-primary coloreactionSidf">
+          <div class="card-body pb-0">
+            <h4 class="mb-0" *ngIf='data'>{{data.TodayVisits}}</h4>
+            <p> {{'HOME.VisitDay' | translate}}</p>
+          </div>
+          <div class="chart-wrapper px-3" style="height:40px;">
+            <canvas baseChart class="chart"
+            [datasets]="lineChart1Data"
+            [labels]="lineChart1Labels"
+            [options]="lineChart1Options"
+            [colors]="lineChart1Colours"
+            [legend]="lineChart1Legend"
+            [chartType]="lineChart1Type"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)"></canvas>
+          </div>
+        </div>
+      </div><!--/.col-->
+      <div class="col-sm-3 col-lg-3" >
+        <div class="card text-white bg-success coloGreen">
+          <div class="card-body pb-0">
+            <h4 class="mb-0" *ngIf='data'>{{data.WeekVisits}}</h4>
+            <p>  {{'HOME.VisitWeek' | translate}}
+              </p>
+          </div>
+          <div class="chart-wrapper" style="height:40px;">
+              <canvas baseChart class="chart"
+              [datasets]="lineChart3Data"
+              [labels]="lineChart3Labels"
+              [options]="lineChart3Options"
+              [colors]="lineChart3Colours"
+              [legend]="lineChart3Legend"
+              [chartType]="lineChart3Type"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)"></canvas>
+            </div>
+        </div>
+      </div><!--/.col-->
+
+
+    <div class="col-sm-3 col-lg-3" >
+        <div class="card text-white bg-warning coloreactionSidf">
+          <div class="card-body pb-0">
+            <h4 class="mb-0" *ngIf='data'>{{data.MonthVisits}}</h4>
+            <p>    {{'HOME.VisitMonth' | translate}}
+              </p>
+          </div>
+          <div class="chart-wrapper" style="height:40px;">
+              <canvas baseChart class="chart"
+              [datasets]="lineChart3Data"
+              [labels]="lineChart3Labels"
+              [options]="lineChart3Options"
+              [colors]="lineChart3Colours"
+              [legend]="lineChart3Legend"
+              [chartType]="lineChart3Type"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)"></canvas>
+            </div>
+        </div>
+      </div><!--/.col-->
+
+      <div class="col-sm-3 col-lg-3" (click)="navigateTo(2)">
+          <div class="card text-white bg-danger colorejected">
+            <div class="card-body pb-0">
+              <h4 class="mb-0" *ngIf='data'>{{data.Rejected}}</h4>
+              <p> {{'HOME.RequestRejected' | translate}}</p>
+            </div>
+            <div class="chart-wrapper px-3" style="height:40px;">
+                <canvas baseChart class="chart"
+                [datasets]="barChart1Data"
+                [labels]="barChart1Labels"
+                [options]="barChart1Options"
+                [colors]="barChart1Colours"
+                [legend]="barChart1Legend"
+                [chartType]="barChart1Type"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"></canvas>
+              </div>
+          </div>
+        </div><!--/.col-->
+
+        <div class="col-sm-3 col-lg-3" (click)="navigateToapprove()">
+          <div class="card text-white bg-info coloreactionuser">
+            <div class="card-body pb-0">
+       
+              <h4 class="mb-0" *ngIf='data'>{{data.Pending}}</h4>
+              <p>  {{'HOME.RequestPending' | translate}}
+
+              </p>
+            </div>
+            <div class="chart-wrapper px-3" style="height:40px;">
+              <canvas baseChart class="chart"
+              [datasets]="barChart1Data"
+              [labels]="barChart1Labels"
+              [options]="barChart1Options"
+              [colors]="barChart1Colours"
+              [legend]="barChart1Legend"
+              [chartType]="barChart1Type"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)"></canvas>
+            </div>
+          </div>
+        </div><!--/.col-->
+
+
+        <div class="col-sm-3 col-lg-3" (click)="navigateTovisit()">
+          <div class="card text-white bg-primary coloreactionSidf">
+            <div class="card-body pb-0">
+              <h4 class="mb-0" *ngIf='data'>{{data.AllRequest}}</h4>
+              <p> {{'HOME.AllRequest' | translate}}</p>
+            </div>
+            <div class="chart-wrapper px-3" style="height:40px;">
+              <canvas baseChart class="chart"
+              [datasets]="lineChart1Data"
+              [labels]="lineChart1Labels"
+              [options]="lineChart1Options"
+              [colors]="lineChart1Colours"
+              [legend]="lineChart1Legend"
+              [chartType]="lineChart1Type"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)"></canvas>
+            </div>
+          </div>
+        </div><!--/.col--> <!--/.col-->
+        <div class="col-sm-3 col-lg-3" >
+          <div class="card text-white bg-info coloreactionSidf">
+            <div class="card-body pb-0">
+              <h4 class="mb-0" *ngIf='data'>{{data.Alldeparture}}</h4>
+              <p>    {{'HOME.VisitorAlldeparture' | translate}}
+                </p>
+            </div>
+            <div class="chart-wrapper" style="height:40px;">
+                <canvas baseChart class="chart"
+                [datasets]="lineChart3Data"
+                [labels]="lineChart3Labels"
+                [options]="lineChart3Options"
+                [colors]="lineChart3Colours"
+                [legend]="lineChart3Legend"
+                [chartType]="lineChart3Type"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"></canvas>
+              </div>
+          </div>
+        </div><!--/.col-->
+        <div class="col-sm-3 col-lg-3" >
+          <div class="card text-white bg-info coloreactionuser">
+            <div class="card-body pb-0">
+       
+              <h4 class="mb-0" *ngIf='data'>{{data.Todaydeparture}}</h4>
+              <p>  {{'HOME.VisitorTodaydeparture' | translate}}
+
+              </p>
+            </div>
+            <div class="chart-wrapper px-3" style="height:40px;">
+              <canvas baseChart class="chart"
+              [datasets]="barChart1Data"
+              [labels]="barChart1Labels"
+              [options]="barChart1Options"
+              [colors]="barChart1Colours"
+              [legend]="barChart1Legend"
+              [chartType]="barChart1Type"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)"></canvas>
+            </div>
+          </div>
+        </div><!--/.col-->
+    </div>
+   
+  
+ <br>
+    
+  
+  </div>
+  
+  </div>
+  <div class="card">
+        <div class="card-body">
+      <div class="row">
+         
+               <h4 style="margin-right:20px;margin-left: 20px;"
+                class="card-title mb-0">{{'HOME.statistics' | translate}}</h4>
+              <!--<div class="small text-muted">2010</div> -->
+              <div class="col-sm-12 chart-wrapper">
+                <p-chart type="bar" [data]="datachart"></p-chart>
+                   </div>
+             
+          </div><!--/.row--> 
+         
+        </div>
+     <!--   <div class="card-footer">
+          <ul>
+            <li>
+              <div class="text-muted">{{'HOME.Visits' | translate}}</div>
+              <strong>29.703 {{'HOME.Visit' | translate}} </strong>
+              <div class="progress progress-xs mt-2">
+                <div class="progress-bar bg-success" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </li>
+            <li class="hidden-sm-down">
+              <div class="text-muted">{{'HOME.ExpectedVisits' | translate}}</div>
+              <strong>24.093 {{'HOME.Visit' | translate}} </strong>
+              <div class="progress progress-xs mt-2">
+                <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </li>
+         <li>
+              <div class="text-muted">Pageviews</div>
+              <strong>78.706 Views (60%)</strong>
+              <div class="progress progress-xs mt-2">
+                <div class="progress-bar bg-warning" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </li>
+            <li class="hidden-sm-down">
+              <div class="text-muted">New Users</div>
+              <strong>22.123 Users (80%)</strong>
+              <div class="progress progress-xs mt-2">
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </li>
+            <li class="hidden-sm-down">
+              <div class="text-muted">Bounce Rate</div>
+              <strong>40.15%</strong>
+              <div class="progress progress-xs mt-2">
+                <div class="progress-bar" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </li> 
+          </ul>
+        </div>  
+      </div>-->
+      <!--/.card-->
+    
+    </div>
+  
+
+
+  </div>
+</div>
+</div>

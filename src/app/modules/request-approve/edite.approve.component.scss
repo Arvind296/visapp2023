@@ -1,0 +1,16 @@
+.dialogbtn{
+    width: 80px;
+    font-size: bold;
+    font-weight: 600;
+    height: 31px;
+}
+
+.ng-select.disable-arrow .ng-arrow-wrapper .ng-arrow {
+    display: none;
+  }
+  .ng-select.disable-dropdown ng-dropdown-panel {
+    display: none;
+  }
+  .ng-select.disable-clear-all .ng-clear-wrapper {
+    display: none;
+  }

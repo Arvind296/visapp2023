@@ -1,0 +1,48 @@
+<div class="editor-page">
+  <div class="container page">
+    <div class="row">
+      <div class="col-md-12 col-xs-12">
+
+        <app-list-errors [errors]="errors"></app-list-errors>
+        <h2 style="color: #41ad4f; text-align: center;padding: 8px;">{{'Header.contract'|translate}}</h2>
+
+        <div>
+          <ng2-smart-table [settings]="settings" (custom)="onMakeCard($event)"  (delete)='onDelete($event)' (create)='onAdd($event)' [source]="source"  (edit)="onEdit($event)">
+          </ng2-smart-table>
+        </div>
+      
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <p-dialog header="{{'Visit.modalDeleteTitle'| translate}}" [(visible)]="displaydl" [modal]="true"  [responsive]="true" [width]="450" [minWidth]="300" [minY]="70" 
+          [maximizable]="false" [baseZIndex]="10000">
+        <span> {{'Visit.modalDeleteMessage'| translate}} </span>
+        
+  
+          <p-footer>
+            <button  class="dialogbtn" type="button" pButton (click)="delete()" > {{'Common.Save' | translate}}</button>
+            <button  class="dialogbtn" type="button" pButton   (click)="displaydl=false">  {{'Common.Cancle' | translate}}</button>
+  
+             
+          </p-footer>
+  </p-dialog>
+  </div> 
+
+  <div>
+    <p-dialog header="{{'Contract.modalCardTitle'| translate}}" [(visible)]="display" [modal]="true"  [responsive]="true" [width]="450" [minWidth]="300" [minY]="70" 
+            [maximizable]="false" [baseZIndex]="10000">
+          <span> {{'Contract.modalMakeMessage'| translate}} </span>
+          
+    
+            <p-footer>
+              <button  class="dialogbtn" type="button" pButton (click)="makeCard()" > {{'Common.Save' | translate}}</button>
+              <button  class="dialogbtn" type="button" pButton   (click)="display=false">  {{'Common.Cancle' | translate}}</button>
+    
+               
+            </p-footer>
+    </p-dialog>
+    </div> 

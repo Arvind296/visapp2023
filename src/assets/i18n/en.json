@@ -1,0 +1,165 @@
+{
+  "HOME": {
+    "VisitDay": "Today Visits",
+    "VisitWeek": "Week Visits",
+    "VisitMonth": "Month Visits",
+    "BlackList": "Black List",
+    "RequestPending": "Pending Requests",
+    "RequestRejected": "Rejected Requests",
+    "statistics": "statistics",
+    "Visits":"Actual Visits",
+    "ExpectedVisits":"Expected Visits",
+    "Visit":"Visit",
+    "RequestAccepted": "Approved Requests",
+    "AllRequest":"All Requests",
+    "VisitorAlldeparture": "All Visitors Not Yet Departure",
+    "VisitorTodaydeparture": "Today Visitor Not Yet Departure"
+  },
+  "Visit": {
+    "VisitTypeID": "Visit Type",
+    "IDType": "Identification Type",
+    "ID": "National Id",
+    "VisitRequestEmp":"Employee",
+    "VisitRequestAnother":"Another Person ",
+    "VisitRequest":"Visit Request",
+    "VisitDate": "Visit Date ",
+    "StartTime": "Start Time",
+    "EndTime": "EndTime",
+    "MeetingRoom": "Meeting place",
+    "Description": "Purpose of the visit",
+    "PrivateParking": "Use Parking",
+    "StatusId": "Status",
+    "SupervisorComments": "Supervisor Comment ",
+    "SecurityComments": "Security Comment",
+    "Name": "Name",
+    "NationalityID": " Nationality",
+    "MobileNo":"Mobile No",
+    "VisitTypeVisit": " Visit ",
+    "VisitTypWalkinVisitor": " Walk in ",
+    "VisitID":"ID",
+    "IDTypepassportOrIqama":"Iqama/passport number ",
+   "IDTypeNationalId":" National ID  ",
+   "EditpageTitle":" Edit Request ",
+   "AddpageTitle":" Add Request ",
+   "modalDeleteTitle":" Delete Request ",
+   "modalDeleteMessage":" are you sure delete this request ? ",
+   "NoRequest":" No Requests ",
+   "NoVisitor":" No Visitor ",
+   "RequestorID":"Employee",
+   "StatusType":"status ",
+   "EditModalTitle":"Update Visitor",
+   "AddModalTitle":" Add Visitor ",
+   "RequiredDescription":"Purpose of the visit is required  ",
+   "RequiredTime":"Time is required   ",
+   "RequiredDate":"Date is required ",
+   "Addvisitors":"Visitors is required   ",
+   "RequiredVisitTypeID":"Visit Type is required   ",
+   "VisitTitlePage":"Requests",
+   "VisitorName":"Visitor Name",
+
+   "CreatedDate":"Created Date",
+   "modalCreateOuutlookMettingMessage":"Please create this metting in outlook ",
+   "modalSlectRoom":"Inforamtion To Create Outlook Meeting",
+   "RequiredRequestorID":"Employee  is required",
+   "Can’tDelete":"Can’t delete this Request Please call Security head"
+  }, 
+   "Common":{
+    "isrequired":" is required ",
+    "Cancle":" Cancel ",
+    "Save":" Submit  ",
+    "Search":"Search",
+    "Reset":"Reset",
+    "Languge":"عربي",
+    "NoData":"No Data ",
+    "Edit":"Edit",
+    "Add":"Add",
+    "delete":"delete",
+    "Close":"Close"
+  } ,
+  "ApproveRequest":{
+    "Employee_name_EN":"Employee",
+    "Employee_name_AR":"Employee",
+    "AddComment":" you shoud Add Comment ",
+    "VisitorName":"Visitor",
+    "requestApproveTitlePage":"Request Approve ",
+    "ShowRequest":"Show Request ",
+    "VisitorStatus": "Visitor Status"
+    
+  },
+  "Header":{
+    "Approve":"Approve requests",
+    "Home":"Home",
+    "Visit":"Request",
+    "SearchRequest":"Today's Visitor",
+    "blacklist":"visitors notes",
+    "contract":"Contract",
+    "Report":"Reports"
+
+  },
+  "Footer":{
+    "Message":" Saudi Industrial Development Fund. All rights reserved  ",
+    "text":" Visitor System",
+    "version":"version  "
+  },
+  "SearchRequest":{
+    "office_extn":"Office Ext.",
+    "bl_Name":"Name",
+    "bl_MobileNo":"Mobile No",
+    "RequesterName":"Employee Name",
+    "SearchblTitlePage":"black list data",
+    "SearchvisitTitlePage":"visitor list data",
+    "SearchTitlePage":"Search Request",
+    "modalNotesTitle":"Visitor Notes ",
+    "Comments":"Notes",
+    "TimeAttendance":"Time Attendance",
+    "TimeToleave":"Time To leave ",
+    "Supervisor_Name":"Supervisor",
+    "Supervisor_office_extn":"Supervisor extension",
+    "modalConfirmTitle":"Confirmtion",
+    "modalExitMessage":"Do you really want to depature your visitor ?",
+    "Alreadydeparture":"This visitor is already gone",
+    "Exit":"Exit",
+    "AddNotes":"Add Note",
+    "NumberofVisitors":"Visitors No.",
+    "Department_EN":"Department"
+  },
+  "Contract":{
+    "EditModalTitle":"ُEdit Contract ",
+    "DeleteModalTitle":"Delete Contract",
+    "AddModalTitle":"Add Contract",
+    "CompanyName":"Company Name ",
+    "StartDate":"Start Date",
+    "EndDate":"End Date",
+    "RequestDeptNameAR":"Department",
+    "modalMakeMessage":"Has an employee card already been created? ",
+    "modalCardTitle":"Confirm creation of a card",
+    "ID":"Contract ID"
+
+  },
+  "BlackList":{
+    "EditModalTitle":" Edit black list",
+    "DeleteModalTitle":"delete black List ",
+    "AddModalTitle":" Add black List",
+    "StatusType":"Status",
+    "Description": "Reason",
+    "NoteTypeOrang":"Average",
+    "NoteTypeRed":"high",
+    "NoteType":"Observation level",
+    "Can’tDelete":"Can’t delete this Visitor from notes Please call Security head"
+   
+  },
+  "Report":{
+    "FromDate":"From Date",
+    "ToDate":"To Date ",
+    "ContractReport":"Contract Report",
+    "VisitorReport":"Visitor Report",
+    "SearchContractTitlePage":"Contract Report",
+    "SearchVisitTitlePage":"Visitor Report",
+    "ExportPdf":" Export Pdf ",
+    "NumberRecord":"Count"
+  }
+  
+
+
+
+}

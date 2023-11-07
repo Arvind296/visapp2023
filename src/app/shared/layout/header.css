@@ -1,0 +1,40 @@
+
+
+
+.navbar-nav .nav-item+.nav-item {
+    margin: 0;
+}
+
+.nav-item {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 0 9px;
+    cursor: pointer;
+}
+
+  .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-item:hover {
+    background: #5cb85c;
+}
+  .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-item:hover .nav-link {
+    color: #fff;
+}
+
+nav .container{
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+nav .container.rtl{
+      flex-direction: row-reverse;
+}
+nav .container.rtl .navbar-nav {
+    -ms-flex-direction: row;
+    flex-direction: row-reverse;
+}
+
+

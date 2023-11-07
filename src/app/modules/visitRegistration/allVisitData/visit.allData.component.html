@@ -1,0 +1,69 @@
+<div class="editor-page">
+  <div class="container page">
+    <div class="row">
+      <div class="col-md-12 col-xs-12">
+
+        <app-list-errors [errors]="errors"></app-list-errors>
+        <h2 style="color: #41ad4f; text-align: center;padding: 8px;">{{VisitTitlePage}}</h2>
+
+
+        <div class="row col-sm-12" style="margin: 10px;">
+          <label class="col-sm-2"  for="StatusId">{{'Visit.StatusId' | translate}}</label>
+          <div class="col-sm-8">
+            <div class="form-group">
+            <ng-select [items]="status" 
+            [virtualScroll]="true" 
+            [ngModelOptions]="{standalone: true}"
+            bindLabel='{{statustextLbl}}'
+            bindValue="StatusID"
+            (clear)="getVistits()"
+            (close)="getVistits()"
+            placeholder="{{'Visit.StatusId' | translate}}"
+            [(ngModel)]="selectedStatus">
+  </ng-select>
+            </div>
+          </div>
+        
+      <!--     <div class="col-sm-4" style="display: flex;flex-direction: row; flex-wrap: nowrap;justify-content: space-around; align-items: center; align-content: center;">
+            <div class="col-sm-6">
+                <button type="button" id="Search" (click)="getVistits()"
+                class="submit-btn2 search-btn">{{'Common.Search' | translate}}</button>
+                <br>
+              </div>
+              <div class="col-sm-6">
+                  <button type="button" id="Reset" (click)="Reset()"
+                  class="submit-btn2 search-btn">{{'Common.Reset' | translate}}</button>
+                  <br>
+                </div>
+              </div> -->
+       
+    </div>
+
+
+        
+        <div>
+          <ng2-smart-table [settings]="settings" (delete)='onDelete($event)' (create)='onAdd()' [source]="source"  (edit)="onEdit($event)">
+          </ng2-smart-table>
+        </div>
+      
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <p-dialog header="{{'Visit.modalDeleteTitle'| translate}}" [(visible)]="displaydl" [modal]="true" (onHide)='closedialoge()' [responsive]="true" [width]="450" [minWidth]="300" [minY]="70" 
+          [maximizable]="false" [baseZIndex]="10000">
+        <span> {{'Visit.modalDeleteMessage'| translate}} </span>
+        
+  
+          <p-footer>
+            <button  class="dialogbtn" type="button" pButton (click)="delete()" > {{'Common.Save' | translate}}</button>
+            <button  class="dialogbtn" type="button" pButton   (click)="displaydl=false">  {{'Common.Cancle' | translate}}</button>
+  
+             
+          </p-footer>
+  </p-dialog>
+  </div> 
+

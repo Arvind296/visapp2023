@@ -1,0 +1,12 @@
+.dialogbtn{
+    width: 80px;
+    font-size: bold;
+    font-weight: 600;
+    height: 31px;
+}
+:host /deep/ tr.solved {
+    color: rgba(86, 241, 86, 0.5);
+    }
+    :host /deep/ tr.aborted {
+    color: rgba(243, 69, 69, 0.5);
+    }    

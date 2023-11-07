@@ -1,0 +1,89 @@
+body , div , section , h1 , h2 , h3 , h4 , h5 , h6 , p {
+	direction: ltr !important;
+	text-align: left ;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+h1 , h2 , h3 , h4 , h5 , h6 , button{
+    text-transform: capitalize;
+    font-family: 'Roboto Condensed', sans-serif !important;
+}
+
+h5 , h6{
+    font-family: 'Roboto', sans-serif !important;
+
+}
+.ui-g-1, .ui-g-2, .ui-g-3, .ui-g-4, .ui-g-5, .ui-g-6, .ui-g-7, .ui-g-8, .ui-g-9, .ui-g-10, .ui-g-11, .ui-g-12{
+    float: left !important;
+  }
+  
+#articles  .all-articles  .one-article  .article-image  img  {
+    width: 60px !important;
+    margin-left: unset !important;
+    margin-right: 10px !important;
+}
+
+#articles  .all-articles  .one-article  .article-headline  h6  {
+	margin-left: unset !important;
+	margin-left: 70px !important;
+}
+
+#articles  .all-articles  .one-article  .article-headline  h6::before{
+	right:unset !important;
+	left: 28px !important;
+}
+
+#videos  .videos-and-forms  .fourm-chats {
+    margin: 0px 0px 0 10px !important;
+}
+
+#videos  .videos-and-forms  .videos-container  .videoheadline  .btn-video {
+    margin-right: unset !important;
+    margin-left: 60px !important;
+} 
+
+
+
+
+.btn-custom {
+    text-align: left !important; 
+}
+
+.btn-custom::after{
+    left: unset !important;
+    right: 15px !important;
+    
+}
+.btn-custom::before{
+    left: unset !important;
+    right: 15px !important;
+    
+}
+
+
+.btn-menu-img{
+  left:unset !important;
+  right: 23px !important;
+}
+
+.readmore-btn-bar , .readmoreline {
+    text-align: right !important;
+}
+
+.btn-read-more{
+    margin-right: 50px;
+}
+
+
+.btn-filter-img{
+    left:unset !important;
+    right: 23px !important;
+}
+
+
+.table {
+    direction: ltr  !important;
+    text-align: left !important;
+}
+
+

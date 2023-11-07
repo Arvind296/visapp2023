@@ -1,0 +1,190 @@
+<form name="form" [formGroup]="form" (ngSubmit)="form.valid && onSubmit()">
+<h2 mat-dialog-title>{{modalTitle}}</h2>
+
+<mat-dialog-content [formGroup]="form">
+
+<!-- <div class="editor-page">
+  <div class="container page">
+    <div class="row">
+      <div class="col-md-10 offset-md-1 col-xs-12"> -->
+
+        
+      
+          <fieldset *ngIf="actionType==1" class="fieldset1" style="margin: 6px;">
+            <legend> {{'Common.Search' | translate}} </legend>
+            <div *ngIf="actionType==1" class="row col-md-12" >
+          
+            
+          <div class="col-md-5">
+            <div class="form-group row">
+              <label class="col-sm-4" for="ID">{{'Visit.ID' | translate}}</label>
+              <input class="form-control col-sm-8" type="text" name="ID" placeholder="{{'Visit.ID' | translate}}"  
+               [ngModelOptions]="{standalone: true}" 
+             (keyup.enter)="SearchData()"  [(ngModel)]="searchNationalID" />
+            </div>
+          </div>
+    <div class="col-md-5">
+      <div class="form-group row">
+        <label class="col-sm-2" for="ID">{{'Visit.Name' | translate}}</label>
+      <p-autoComplete [(ngModel)]="searchName" (onSelect)="SearchData()" [ngModelOptions]="{standalone: true}"
+      [inputStyleClass]="'form-control form-control-inline'"   class="col-sm-10" [suggestions]="datasource" (completeMethod)="SearchVistorByName($event)" 
+      field="Name" [size]="30"
+    placeholder="{{'Visit.Name' | translate}}" [minLength]="3"></p-autoComplete>
+    </div>
+    </div>
+        
+          <div class="col-md-2">
+              <button type="button" id="Search" (click)="SearchData()"
+              class="submit-btn2 search-btn">{{'Common.Search' | translate}}</button>
+              <br>
+            </div>
+          
+    </div>
+</fieldset> 
+
+ 
+
+
+
+        <app-list-errors [errors]="errors"></app-list-errors>
+        <fieldset  class="fieldset1">
+          <legend> {{modalTitle}} </legend>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div style="padding: 2px;background-color:rgb(247, 247, 247);" >
+            
+             
+                  <div class="form-group">
+                    <label for="Name">{{'Visit.Name' | translate}}</label>
+                    <input type="text"  class="form-control" formControlName="Name" [ngClass]="{'is-invalid':form.get('Name').touched && form.get('Name').invalid}" required />
+                    <div *ngIf="form.get('Name').touched && form.get('Name').invalid"  class="invalid-feedback">
+                      <div  *ngIf="form.get('Name').errors.required"> {{'Visit.Name' | translate}} {{'Common.isrequired' | translate}}</div>
+                    </div>
+                  </div>
+
+      <!-- VisitTypeID-->
+      <fieldset class="form-group">
+        <div class="row ui-g-12">
+          <div class="ui-g-4">
+            <label for="group1">{{'Visit.IDType' | translate}}</label>
+          </div>
+        <div class="ui-g-8">
+          <p-radioButton name="group1"  value="1" label="{{'Visit.IDTypeNationalId' | translate}}"   formControlName="IDType"  inputId="opt1"></p-radioButton>
+          <p-radioButton name="group1"   value="2" label="{{'Visit.IDTypepassportOrIqama' | translate}}"   formControlName="IDType"  inputId="opt2"></p-radioButton>
+          <div *ngIf="form.get('IDType').touched && form.get('IDType').invalid"  class="invalid-feedback">
+            <div  *ngIf="form.get('IDType').errors.required"> {{'Visit.IDType' | translate}} {{'Common.isrequired' | translate}}</div>
+          </div>
+        </div>
+      </div>
+      </fieldset>
+      <!-- ID -->
+      <div class="form-group">
+        <label for="ID">{{'Visit.ID' | translate}}</label>
+        <input type="text" name="ID"  class="form-control" formControlName="ID" [ngClass]="{'is-invalid':form.get('ID').touched && form.get('ID').invalid}" required />
+        <div *ngIf="form.get('ID').touched && form.get('ID').invalid"  class="invalid-feedback">
+          <div  *ngIf="form.get('ID').errors.required"> {{'Visit.ID' | translate}} {{'Common.isrequired' | translate}}</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="MobileNo">{{'Visit.MobileNo' | translate}}</label>
+        <input type="text" name="MobileNo"  class="form-control" formControlName="MobileNo" [ngClass]="{'is-invalid':form.get('MobileNo').touched && form.get('MobileNo').invalid}" required />
+        <div *ngIf="form.get('MobileNo').touched && form.get('MobileNo').invalid"  class="invalid-feedback">
+          <div  *ngIf="form.get('MobileNo').errors.required"> {{'Visit.MobileNo' | translate}} {{'Common.isrequired' | translate}}</div>
+        </div>
+      </div>
+
+                  <div class="form-group">
+                    <label for="NationalityID">{{'Visit.NationalityID' | translate}}</label>
+                <!--     <p-dropdown [options]="nationalities" [style]="{'width':'100%'}" formControlName="NationalityID" placeholder="{{'Visit.NationalityID' | translate}}"  filter="true">
+                  
+                  </p-dropdown> -->
+                  <ng-select [items]="nationalities"
+                  [virtualScroll]="true" required
+                  [disabled]="isblackList" [searchable]="!isblackList" [clearable]="!isblackList"
+                  formControlName="NationalityID"
+                  bindLabel='{{nationalitiytextLbl}}'
+                  bindValue="ID"
+                  placeholder="{{'Visit.NationalityID' | translate}}"
+               >
+        </ng-select>
+        <div *ngIf="form.get('NationalityID').touched && form.get('NationalityID').invalid"  class="invalid-feedback">
+          <div  *ngIf="form.get('NationalityID').errors.required"> {{'Visit.NationalityID' | translate}} {{'Common.isrequired' | translate}}</div>
+        </div>
+                   
+                  </div>
+
+
+
+                 <!--  <div class="ui-g-12">
+                    <fieldset class="form-group">
+                      <label for="Description">{{'Visit.Description' | translate}}</label>
+                      <textarea class="form-control" name="Description"
+                      [ngModelOptions]="{standalone: true}"   [(ngModel)]="blackListDescription" 
+                        rows="4" required
+                        placeholder="{{'Visit.Description' | translate}}">
+                      </textarea>
+                    </fieldset>
+                  </div> -->
+
+           <!--        <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" class="form-control" formControlName="email" [ngClass]="{'is-invalid':form.get('email').touched && form.get('email').invalid}"   />
+                    <div *ngIf="form.get('email').touched && form.get('email').invalid"  class="invalid-feedback">
+                      <div *ngIf="form.get('email').errors.required">Email Name is required</div>
+                      <div *ngIf="form.get('email').errors.email">Email must be a valid email Address</div>
+                    </div>
+                  </div> -->
+               <!--    <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control"  formControlName="password" [ngClass]="{'is-invalid':form.get('password').touched && form.get('password').invalid}" />
+                    <div *ngIf="form.get('password').touched && form.get('password').invalid"  class="invalid-feedback">
+                      <div *ngIf="form.get('password').errors.required">Password is required</div>
+                      <div *ngIf="form.get('password').errors.minlength">Password  must be a letaset 6 charector</div>
+                    </div>
+                   
+                  </div> -->
+                 
+               
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <!--   </div>
+    </div>
+  </div>
+</div> -->
+<br>
+</fieldset> 
+</mat-dialog-content>
+
+<mat-dialog-actions>
+
+
+
+  <div class="row col-md-12 div_btn" >
+    <div class="col-md-4 offset-md-1" >
+          <button class="btn btn-lg pull-xs-right btn-primary cust-btn-green" [disabled]="!form.valid" type="submit">
+            {{'Common.Save' | translate}}
+          </button>
+        </div>
+        <div class="col-md-4 offset-md-1" >
+          <button  class="btn  btn-lg pull-xs-right btn-primary cust-btn-red" type="button" (click)="dialogRef.close()">
+            {{'Common.Cancle' | translate}}
+          </button>
+        </div>
+        </div>
+
+
+ <!--  <div class="form-group div_btn">
+    <button class="mat-raised-button btn btn-primary cust-btn-green" mat-button [disabled]="!form.valid" type="submit"> {{'Common.Save' | translate}}</button>
+    <button mat-button class="mat-raised-button btn btn-danger cust-btn-red" type="button" (click)="dialogRef.close()"> {{'Common.Cancle' | translate}}</button>
+  </div> -->
+  
+
+<!--     <button class="mat-raised-button"(click)="close()">Close</button>
+    <button class="mat-raised-button mat-primary"  >Save</button> -->
+</mat-dialog-actions>
+
+</form>

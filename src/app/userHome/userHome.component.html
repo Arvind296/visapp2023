@@ -1,0 +1,141 @@
+<div class="home-page">
+
+  <div class="banner" >
+    <div class="container">
+      <h1 class="logo-font">{{'Footer.text' | translate}}</h1>
+  <!--     <p>Welcom <i>Angular</i> knowledge.</p> -->
+    </div>
+  </div>
+
+  <div class="container page">
+    <div class="row">
+
+  <!--begin search-->
+
+  <div class="animated fadeIn" style="margin: 7px;">
+  
+  <div>
+ 
+
+
+
+<div>
+
+  <div class="row" style="margin-bottom: 11px; text-align: center; vertical-align: middle;margin-right: 11px;">
+
+
+
+</div>
+
+
+    <div class="row" style="margin-bottom: 5px;">
+    
+      <div class="col-sm-3 col-lg-3" (click)="navigateTovisit()" >
+        <div class="card text-white bg-success coloGreen">
+          <div class="card-body pb-0">
+         
+            <h4 class="mb-0" *ngIf='data'>{{data.AllRequest}}</h4>
+            <p>  {{'HOME.AllRequest' | translate}}
+              </p>
+          </div>
+          <div class="chart-wrapper" style="height:40px;">
+              <canvas baseChart class="chart"
+              [datasets]="lineChart3Data"
+              [labels]="lineChart3Labels"
+              [options]="lineChart3Options"
+              [colors]="lineChart3Colours"
+              [legend]="lineChart3Legend"
+              [chartType]="lineChart3Type"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)"></canvas>
+            </div>
+        </div>
+      </div><!--/.col-->
+
+
+    <div class="col-sm-3 col-lg-3" (click)="navigateTo(1)" >
+        <div class="card text-white bg-warning coloreactionSidf">
+          <div class="card-body pb-0">
+            <h4 class="mb-0" *ngIf='data'>{{data.RequestApproved}}</h4>
+            <p>    {{'HOME.RequestAccepted' | translate}}
+              </p>
+          </div>
+          <div class="chart-wrapper" style="height:40px;">
+              <canvas baseChart class="chart"
+              [datasets]="lineChart3Data"
+              [labels]="lineChart3Labels"
+              [options]="lineChart3Options"
+              [colors]="lineChart3Colours"
+              [legend]="lineChart3Legend"
+              [chartType]="lineChart3Type"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)"></canvas>
+            </div>
+        </div>
+      </div><!--/.col-->
+
+      <div class="col-sm-3 col-lg-3" (click)="navigateTo(2)"  >
+          <div class="card text-white bg-danger colorejected">
+            <div class="card-body pb-0">
+              <h4 class="mb-0" *ngIf='data'>{{data.RequestRejected}}</h4>
+              <p> {{'HOME.RequestRejected' | translate}}</p>
+            </div>
+            <div class="chart-wrapper px-3" style="height:40px;">
+                <canvas baseChart class="chart"
+                [datasets]="barChart1Data"
+                [labels]="barChart1Labels"
+                [options]="barChart1Options"
+                [colors]="barChart1Colours"
+                [legend]="barChart1Legend"
+                [chartType]="barChart1Type"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"></canvas>
+              </div>
+          </div>
+        </div><!--/.col-->
+
+        <div class="col-sm-3 col-lg-3" (click)="navigateTo(3)"  >
+          <div class="card text-white bg-info coloreactionuser">
+            <div class="card-body pb-0">
+       
+              <h4 class="mb-0" *ngIf='data'>{{data.RequestPending}}</h4>
+              <p>  {{'HOME.RequestPending' | translate}}
+
+              </p>
+            </div>
+            <div class="chart-wrapper px-3" style="height:40px;">
+              <canvas baseChart class="chart"
+              [datasets]="barChart1Data"
+              [labels]="barChart1Labels"
+              [options]="barChart1Options"
+              [colors]="barChart1Colours"
+              [legend]="barChart1Legend"
+              [chartType]="barChart1Type"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)"></canvas>
+            </div>
+          </div>
+        </div><!--/.col-->
+
+
+
+
+       
+    </div>
+
+   
+ <br>
+    
+  
+  </div>
+  
+  </div>
+
+      <!--/.card-->
+    
+    </div>
+  
+
+    </div>
+  </div>
+</div>

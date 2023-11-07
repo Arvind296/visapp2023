@@ -1,0 +1,76 @@
+h1 , h2 , h3 , h4 , h5 , h6 , button {
+  font-family: 'El Messiri', sans-serif !important;
+  font-weight: bold !important;
+}
+body , div , section , h1 , h2 , h3 , h4 , h5 , h6 , p {
+   direction: rtl !important;
+  text-align: right ;
+}
+
+.btn-custom {
+  text-align: center !important; 
+}
+td , p , div{
+  font-family: 'El Messiri', sans-serif !important;
+}
+.ui-g-1, .ui-g-2, .ui-g-3, .ui-g-4, .ui-g-5, .ui-g-6, .ui-g-7, .ui-g-8, .ui-g-9, .ui-g-10, .ui-g-11, .ui-g-12{
+  float: right !important;
+}
+
+
+.main{
+  margin-left: unset !important;
+  margin-right: 200px !important;
+}
+
+html:not([dir="rtl"]) .sidebar-lg-show.sidebar-fixed.sidebar-minimized .main, html:not([dir="rtl"]) .sidebar-lg-show.sidebar-fixed.sidebar-minimized .app-footer{
+  margin-left: unset !important;
+  margin-right: 50px !important;
+}
+
+@media (min-width: 992px){
+  .sidebar-minimized .sidebar .nav > .nav-dropdown:hover > .nav-dropdown-items {
+    left: unset !important;
+    right: 50px !important;
+  }
+}
+
+.sidebar-minimized .sidebar .nav-link{
+  direction: ltr !important;
+}
+
+.sidebar .nav-dropdown-toggle::before{
+  right: unset !important;
+  left: 1rem;
+}
+
+
+#new-dialog p-checkbox.check-box { 
+    text-align: right !important;
+}
+
+ul.nav.navbar-nav.ml-auto {
+    margin-right: auto !important;
+    margin-left: unset !important;
+}
+
+.searchparent button{
+  border-radius: 50px 0px 0px 50px !important;
+}
+
+i.close-dialog {
+  right: unset !important;
+  left: 0 !important;
+}
+
+footer.app-footer {
+margin-right: 200px;
+margin-left: unset !important;
+}
+
+
+.app-header .navbar-nav .dropdown-menu-right { 
+left: 0px !important;
+right: auto !important;
+}
+

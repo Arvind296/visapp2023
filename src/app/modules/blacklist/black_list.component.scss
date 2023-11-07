@@ -1,0 +1,14 @@
+.dialogbtn{
+    width: 80px;
+    font-size: bold;
+    font-weight: 600;
+    height: 31px;
+}
+
+:host /deep/ tr.blRed {
+    color: red;
+    }
+    :host /deep/ tr.blOrange {
+    color:rgb(173, 114, 7);
+
+    }    

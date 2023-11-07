@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <title>Visitor System</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ --> 
+ 
+
+ <!-- <link href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css"> -->
+ <link rel="stylesheet" href="./assets/styles/ionicons.min.css"  type="text/css">
+<!--  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+ <link href="./assets/styles/icon.css" rel="stylesheet">
+ <!--  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet"> -->
+  <link href="./assets/styles/css.css" rel="stylesheet">
+<!--   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
+  <link href="./assets/styles/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/styles/main.css">
+  <link rel="stylesheet" id='rtlmainStyle' href="./assets/styles/rtl.css"> 
+<!--   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="./assets/styles/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+  crossorigin="anonymous"> 
+<!--   <link href="//fonts.googleapis.com/css?family=Titillium+Web:700|Source+Serif+Pro:400,700|Merriweather+Sans:400,700|Source+Sans+Pro:400,300,600,700,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+ -->
+  <link href="./assets/styles/fontcss.css" rel="stylesheet" type="text/css">
+
+<link rel="stylesheet" href="styles.b5aa5aff5aa618ca067e.css?v=0.0.3"></head>
+<body>
+  <style>
+    @-webkit-keyframes spin {
+        0% {
+            transform: rotate(0)
+        }
+        100% {
+            transform: rotate(360deg)
+        }
+    }
+    
+    @-moz-keyframes spin {
+        0% {
+            -moz-transform: rotate(0)
+        }
+        100% {
+            -moz-transform: rotate(360deg)
+        }
+    }
+    
+    @keyframes spin {
+        0% {
+            transform: rotate(0)
+        }
+        100% {
+            transform: rotate(360deg)
+        }
+    }
+    
+    .spinner {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1003;
+        background: #f5f5f5;
+        overflow: hidden
+    }
+    
+    .spinner div:first-child {
+        display: block;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        width: 150px;
+        height: 150px;
+        margin: -75px 0 0 -75px;
+        border-radius: 50%;
+        box-shadow: 0 3px 3px 0 #c1a240;
+        transform: translate3d(0, 0, 0);
+        animation: spin 2s linear infinite
+    }
+    
+    .spinner div:first-child:after,
+    .spinner div:first-child:before {
+        content: '';
+        position: absolute;
+        border-radius: 50%
+    }
+    
+    .spinner div:first-child:before {
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        box-shadow: 0 3px 3px 0 #0e977f;
+        -webkit-animation: spin 3s linear infinite;
+        animation: spin 3s linear infinite
+    }
+    
+    .spinner div:first-child:after {
+        top: 15px;
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+        box-shadow: 0 3px 3px 0 #c1a240;
+        animation: spin 1.5s linear infinite
+    }
+    
+    .logo-kl {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        position: absolute;
+        z-index: 1004;
+    }
+</style>
+  <app-root>Loading...</app-root>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+
+        <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <!--    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"></script> -->
+      <script src="./assets/js/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+  <!--     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script> -->
+        <script src="./assets/js/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<!--       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script> -->
+        <script src="./assets/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+        <script>
+            if (localStorage.getItem("lang")==undefined) {
+              localStorage.setItem("lang", "en")
+            }
+            localStorage.getItem("lang") == "ar" ?  $("#rtlmainStyle").attr("href","./assets/styles/rtl.css"):$("#rtlmainStyle").attr("href","./assets/styles/ltr.css");
+            
+        </script>
+<script type="text/javascript" src="runtime.c1307bcca625c5609712.js?v=0.0.3"></script><script type="text/javascript" src="polyfills.57a638623c3db40ab1e6.js?v=0.0.3"></script><script type="text/javascript" src="vendor.58c5d0fb102c2d612a0f.js"></script><script type="text/javascript" src="main.cb646a5cc47ccf0d61a6.js?v=0.0.3"></script></body>
+</html>

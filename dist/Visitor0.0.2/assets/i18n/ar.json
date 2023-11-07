@@ -1,0 +1,169 @@
+{
+  "HOME": {
+    "VisitDay": "زيارت اليوم",
+    "VisitWeek": "زيارت الاسبوع",
+    "VisitMonth": "زيارت الشهر",
+    "BlackList": "ممنوعين من الدخول",
+    "RequestPending": "الطلبات المعلقة",
+    "RequestRejected": "الطلبات المرفوضة ",
+    "statistics": "الإحصائيات",
+    "Visits":" الزيارات الفعلية",
+    "ExpectedVisits":" الزيارات المتوقعه",
+    "Visit":"زيارة",
+    "RequestAccepted": "الطلبات المقبوله",
+    "AllRequest":"الطلبات",
+    "VisitorAlldeparture": "زائرين لم يتم تسجيل خروجهم",
+    "VisitorTodaydeparture": "زائرين اليوم بدون وقت خروج"
+  
+  },
+  "Visit": {
+    "VisitTypeID": "نوع الزيارة",
+    "VisitRequestEmp":"الموظف",
+    "VisitRequestAnother":"لشخص آخر",
+    "VisitRequest":"طلب الزيارة",
+    "modalCreateOuutlookMettingMessage":"برجاء إنشئ هذا الاجتماع من خلال  outlook Meeting ",
+     "modalSlectRoom":"تنبيه لحجز غرفة الإجتماعات",
+    "IDType": "نوع الهوية ",
+    "ID": "رقم الهوية ",
+    "VisitDate": "تاريخ الزيارة",
+    "StartTime": "من وقت",
+    "EndTime": " الي وقت ",
+    "MeetingRoom": "مكان الاجتماع",
+    "Description": "غرض الزيارة",
+    "PrivateParking": "إستخدام الموقف",
+    "StatusId": "حالة الطلب",
+    "SupervisorComments": "تعليق المدير ",
+    "SecurityComments": "تعليق الامن",
+    "Name": "الاسم",
+    "NationalityID": " الجنسية",
+    "MobileNo":"رقم الجوال",
+    "VisitTypeVisit": " زيارة ",
+    "VisitTypWalkinVisitor": " زائر ",
+   "VisitID":"رقم الزيارة",
+   "IDTypepassportOrIqama":" إقامة / جواز سفر ",
+   "IDTypeNationalId":"هوية سعوديه",
+   "EditpageTitle":" تعديل طلب ",
+   "AddpageTitle":" إضافة طلب جديد ",
+   "modalDeleteTitle":"حذف طلب",
+   "modalDeleteMessage":" هل تريد حذف هذا الطلب بالفعل؟",
+   "NoRequest":"لا يوجد طلبات ",
+   "NoVisitor":"لا يوجد زائرين ",
+   "RequestorID":"الموظف",
+   "StatusType":" الحالة",
+   "EditModalTitle":"تعديل زائر",
+   "AddModalTitle":"إضافة زائر",
+   "RequiredDescription":"يجب إدخال غرض الزيارة",
+   "RequiredTime":"يجب إدخال الوقت",
+   "RequiredDate":"يجب إدخال التاريخ",
+   "Addvisitors":"يجب إدخال الزائرين",
+   "RequiredVisitTypeID":"يجب إدخال نوع الزياره",
+   "VisitTitlePage":"الطلبات",
+   "CreatedDate":"تاريخ الإنشاء",
+   "RequiredRequestorID":"يجب إدخال الموظف",
+   "VisitorName":"الزائر",
+   "Can’tDelete":"لايمكن مسح هذا الطلب برجاء تواصل مع مدير الأمن"
+
+
+  },
+  "Common":{
+    "isrequired":" إجباري ",
+    "Cancle":" إلغاء ",
+    "Save":" حفظ ",
+    "Search":"بحث",
+    "Reset":"مسح",
+    "Languge":"En",
+    "Edit":"تعديل",
+    "Add":"إضافة",
+    "delete":"حذف",
+    "NoData":"لا توجد بيانات",
+    "Close":"غلق"
+  }
+  ,
+  "ApproveRequest":{
+    "Employee_name_AR":" إسم الموظف  ",
+    "Employee_name_EN":" إسم الموظف  ",
+    "AddComment":"لابد من كتابة تعليق",
+    "VisitorName":"الزائر",
+    "requestApproveTitlePage":"قبول الطلبات",
+"ShowRequest":"عرض الطلب",
+"VisitorStatus": "حالة الزائر"
+   
+ 
+    
+  },
+  "Header":{
+    "Approve":" قبول الطلبات ",
+    "Home":"الرئيسية",
+    "Visit":" الطلبات ",
+    "SearchRequest":"زوار اليوم ",
+    "blacklist":"ملاحظات الزوار",
+    "contract":"التعاقد",
+    "Report":"التقارير"
+
+  },
+  "Footer":{
+    "Message":"   صندوق التنمية الصناعية السعودي. جميع الحقوق محفوظة ",
+    "text":" نظام الزوار ",
+    "version":"إصدار رقم "
+  },
+  "SearchRequest":{
+    "office_extn":"رقم التحويلة ",
+    "bl_Name":"الزائر",
+    "bl_MobileNo":"الجوال",
+    "RequesterName":"الموظف",
+    "SearchblTitlePage":"قائمة الممنوعين من الدخول",
+    "SearchvisitTitlePage":"قائمة الزوار",
+    "SearchTitlePage":"بحث",
+    "modalNotesTitle":"ملاحظات عن الزائر",
+    "Comments":"ملاحظات",
+    "TimeAttendance":"وقت الدخول ",
+    "TimeToleave":"وقت الخروج",
+    "Supervisor_Name":"المدير",
+    "Supervisor_office_extn":"تحويلة المدير",
+    "modalConfirmTitle":"تأكيد",
+    "modalExitMessage":"هل تريد تسجيل خروج  الزائر بالفعل؟",
+    "Alreadydeparture":"هذا الزائر تم تسجيل خروجه من قبل",
+    "Exit":"خروج",
+    "AddNotes":"إضافة ملاحظه",
+    "NumberofVisitors" : "عدد الزوار",
+    "Department_AR" : "القسم"
+  },
+  "Contract":{
+    "EditModalTitle":"تعديل تعاقد ",
+    "DeleteModalTitle":"حذف تعاقد",
+    "AddModalTitle":"إضافة تعاقد",
+    "CompanyName":"إسم الشركة",
+    "StartDate":"بداية التعاقد ",
+    "EndDate":"نهاية التعاقد",
+    "RequestDeptNameAR":"القسم",
+    "modalMakeMessage":"هل تم إنشاء كارت للموظف بالفعل",
+"modalCardTitle":"تأكيد إنشاء كارت",
+"ID":"هوية المتعاقد"
+
+  },
+  "BlackList":{
+    "EditModalTitle":"تعديل ملاحظة ",
+    "DeleteModalTitle":"حذف ",
+    "AddModalTitle":"إضافة ملاحظة زائر",
+    "StatusType":"الحاله",
+    "Description": "السبب",
+    "NoteTypeOrang":"متوسط",
+    "NoteTypeRed":"عالي",
+    "NoteType":"مستوي الملاحظة",
+    "Can’tDelete":"لايمكن مسح هذا الزائر من قائمة الملاحظات برجاء تواصل مع مدير الأمن"
+  },
+  "Report":{
+    "FromDate":"من تاريخ",
+    "ToDate":"الي تاريخ ",
+    "VisitorReport":"عرض تقرير الزوار",
+    "ContractReport":"عرض تقرير المتعاقدين",
+    "SearchContractTitlePage":"تقرير المتعاقدين",
+    "SearchVisitTitlePage":"تقرير الزوار",
+    "ExportPdf":"تصدير PDF",
+    "NumberRecord":"العدد"
+  
+  }
+  
+  
+
+}

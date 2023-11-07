@@ -1,0 +1,1 @@
+export enum ActionType{Add=1,Edit,Delete,BlackList}

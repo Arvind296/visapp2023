@@ -1,0 +1,149 @@
+<form name="form" [formGroup]="form" (ngSubmit)="form.valid && onSubmit()">
+<h2 mat-dialog-title>{{modalTitle}}</h2>
+
+<mat-dialog-content [formGroup]="form">
+
+        <app-list-errors [errors]="errors"></app-list-errors>
+        <div *ngIf="actionType==1" class="row" style="margin: 10px;">
+          <div class="col-sm-5">
+            <div class="form-group row">
+              <label class="col-sm-4" for="ID">{{'Visit.ID' | translate}}</label>
+              <input class="form-control col-sm-8" type="text" name="ID" placeholder="{{'Visit.ID' | translate}}"  
+               [ngModelOptions]="{standalone: true}" 
+             (keyup.enter)="SearchData()"  [(ngModel)]="searchNationalID" />
+            </div>
+    
+          </div>
+          <div class="col-md-5">
+            <div class="form-group row">
+              <label class="col-sm-2" for="ID">{{'Visit.Name' | translate}}</label>
+       <!--      <ng2-completer class="col-sm-10" [inputClass]="'form-control form-control-inline'" 
+         [ngModelOptions]="{standalone: true}"
+            [clearSelected]="true" (selected)="onSelected($event)" [selectOnClick]="true"
+            (ngModelChange)="SearchVistorByName($event)"
+            [(datasource)]="datasource"
+            [minSearchLength]="3"
+            [(ngModel)]="searchName"></ng2-completer> -->
+            <p-autoComplete [(ngModel)]="searchName" (onSelect)="SearchData()" [ngModelOptions]="{standalone: true}"
+            [inputStyleClass]="'form-control form-control-inline'"   class="col-sm-10" [suggestions]="datasource" (completeMethod)="SearchVistorByName($event)" 
+            field="Name" [size]="30"
+          placeholder="{{'Visit.Name' | translate}}" [minLength]="3"></p-autoComplete>
+          </div>
+          </div>
+          <div class="col-sm-2">
+              <button type="button" id="Search" (click)="SearchData()"
+              class="submit-btn2 search-btn">{{'Common.Search' | translate}}</button>
+              <br>
+            </div>
+    </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div style="padding: 2px;background-color:rgb(247, 247, 247);" >
+            
+                  <!-- VisitTypeID-->
+      <fieldset class="form-group">
+        <div class="row ui-g-12">
+          <div class="ui-g-6">
+            <label for="group1">{{'BlackList.NoteType' | translate}}</label>
+          </div>
+        <div class="ui-g-6">
+          <p-radioButton name="Ngroup1"  value="1" label="{{'BlackList.NoteTypeOrang' | translate}}"   formControlName="NoteType"  inputId="optN1"></p-radioButton>
+          <p-radioButton name="Ngroup1"   value="2" label="{{'BlackList.NoteTypeRed' | translate}}"   formControlName="NoteType"  inputId="optN2"></p-radioButton>
+        </div>
+      </div>
+      </fieldset>
+                  <div class="form-group">
+                    <label for="Name">{{'Visit.Name' | translate}}</label>
+                    <input type="text"  class="form-control" formControlName="Name" [ngClass]="{'is-invalid':form.get('Name').touched && form.get('Name').invalid}" required />
+                    <div *ngIf="form.get('Name').touched && form.get('Name').invalid"  class="invalid-feedback">
+                      <div  *ngIf="form.get('Name').errors.required"> {{'Visit.Name' | translate}} {{'Common.isrequired' | translate}}</div>
+                    </div>
+                  </div>
+
+      <!-- VisitTypeID-->
+      <fieldset class="form-group">
+        <div class="row ui-g-12">
+          <div class="ui-g-6">
+            <label for="group1">{{'Visit.IDType' | translate}}</label>
+          </div>
+        <div class="ui-g-6">
+          <p-radioButton name="group1"  value="1" label="{{'Visit.IDTypeNationalId' | translate}}"   formControlName="IDType"  inputId="opt1"></p-radioButton>
+          <p-radioButton name="group1"   value="2" label="{{'Visit.IDTypepassportOrIqama' | translate}}"   formControlName="IDType"  inputId="opt2"></p-radioButton>
+        </div>
+      </div>
+      </fieldset>
+      <!-- ID -->
+      <div class="form-group">
+        <label for="ID">{{'Visit.ID' | translate}}</label>
+        <input type="text" name="ID"  class="form-control" formControlName="ID" [ngClass]="{'is-invalid':form.get('ID').touched && form.get('ID').invalid}" required />
+        <div *ngIf="form.get('ID').touched && form.get('ID').invalid"  class="invalid-feedback">
+          <div  *ngIf="form.get('ID').errors.required"> {{'Visit.ID' | translate}} {{'Common.isrequired' | translate}}</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="MobileNo">{{'Visit.MobileNo' | translate}}</label>
+        <input type="text" name="MobileNo"  class="form-control" formControlName="MobileNo" [ngClass]="{'is-invalid':form.get('MobileNo').touched && form.get('MobileNo').invalid}" required />
+        <div *ngIf="form.get('MobileNo').touched && form.get('MobileNo').invalid"  class="invalid-feedback">
+          <div  *ngIf="form.get('MobileNo').errors.required"> {{'Visit.MobileNo' | translate}} {{'Common.isrequired' | translate}}</div>
+        </div>
+      </div>
+      <!-- StatusId -->
+      <div class="form-group">
+        <label for="StatusId">{{'Visit.StatusId' | translate}}</label>
+      <ng-select [items]="status" 
+      [virtualScroll]="true" 
+      bindLabel='{{statustextLbl}}'
+      [disabled]="isdisabledStatus" [searchable]="!isdisabledStatus" [clearable]="!isdisabledStatus"
+      bindValue="StatusID"
+      placeholder="{{'Visit.StatusId' | translate}}"
+      formControlName="StatusId">
+</ng-select>
+      </div>
+<!-- NationalityID -->
+                  <div class="form-group">
+                    <label for="NationalityID">{{'Visit.NationalityID' | translate}}</label>
+                  <ng-select [items]="nationalities"
+                  [virtualScroll]="true"
+                  formControlName="NationalityID"
+                  bindLabel='{{nationalitiytextLbl}}'
+                  bindValue="ID"
+                  placeholder="{{'Visit.NationalityID' | translate}}"
+               >
+        </ng-select>
+                  </div>
+
+
+
+                  <div class="form-group">
+                      <label for="Description">{{'BlackList.Description' | translate}}</label>
+                      <textarea class="form-control" name="Description"
+                      formControlName="Description"
+                        rows="4" required
+                        placeholder="{{'BlackList.Description' | translate}}">
+                      </textarea>
+                      <div *ngIf="form.get('Description').touched && form.get('Description').invalid"  class="invalid-feedback">
+                        <div  *ngIf="form.get('Description').errors.required"> {{'BlackList.Description' | translate}} {{'Common.isrequired' | translate}}</div>
+                      </div>
+                  </div>
+
+                 
+               
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <div class="form-group div_btn">
+    <button class="mat-raised-button btn btn-primary cust-btn-green" mat-button [disabled]="!form.valid" type="submit"> {{'Common.Save' | translate}}</button>
+    <button mat-button class="mat-raised-button btn btn-danger cust-btn-red" type="button" (click)="dialogRef.close()"> {{'Common.Cancle' | translate}}</button>
+  </div>
+  
+</mat-dialog-actions>
+
+</form>

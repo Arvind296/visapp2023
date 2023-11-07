@@ -1,0 +1,2 @@
+export * from './visitRegistration.module';
+
