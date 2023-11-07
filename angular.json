@@ -140,6 +140,9 @@
       }
     }
   },
-  "defaultProject": "VisitorSystem"
+  "defaultProject": "VisitorSystem",
+  "cli": {
+    "analytics": "20fb97bb-950a-4228-8f37-275f752e8d41"
+  }
 
 }
